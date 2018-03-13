@@ -1,4 +1,4 @@
-.content {
+  .content {
     display: flex;
     flex-wrap: wrap;
   }
@@ -23,9 +23,55 @@
   
     .header__logo {
       height: 36px;
+      margin: 0.5em 0.25em;
     }
 
-    
+    .nav {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: translate(600px, 0);
+        background-color: #fff;
+    }
+
+    .nav.open {
+        transform: translate(0, 0);
+    }
+
+    .nav__item {
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .header__menu {
+        display: inline-block;
+        right: 0;
+        position: absolute;
+        padding: 0.5em 0.25em;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
   }
   
   @media screen and (min-width: 550px){

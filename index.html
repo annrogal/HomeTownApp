@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="responsive.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
     <header class="header">
@@ -17,9 +16,11 @@
         <h1 class="header__title">
           The Brighton Times
         </h1>
-        <a class="header__menu">
-          <i class="far fa-bars"></i>
-        </a>
+        <div class="header__menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
       </div>
     </header>
 
@@ -182,5 +183,17 @@
         </ul>
       </footer>
     </main>
+    <script>
+      const menu = document.getElementsByClassName("header__menu");
+      const drawer = document.getElementsByClassName("nav");
+      const main = document.querySelector("main");
+
+        menu[0].addEventListener("click", (e) => {
+          drawer[0].classList.toggle("open");
+          menu[0].classList.toggle("change");
+          e.stopPropagation();
+        });
+     
+    </script>
   </body>
 </html>
